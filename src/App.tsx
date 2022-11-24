@@ -1,18 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Title } from './componentes/Title/Title';
-import {Text} from './componentes/Text/Text'
+import Navbar from './componentes/navbar/Navbar';
+import Home from './componentes/home/Home';
 
 function App() {
-  const nome = ''
   return (
-    <>
-      <Title nome = ""/>
-      <Text />
-    </>
-    
-    
+   <>
+   <Home />
+   </>
   );
 }
 
