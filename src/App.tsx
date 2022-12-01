@@ -1,20 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './componentes/estaticos/navbar/Navbar';
+import Footer from './componentes/estaticos/footer/Footer';
+import Home from './paginas/home/Home';
 import './App.css';
-import Home from './componentes/estaticos/home/Home';
-import NavBar from './componentes/estaticos/navbar/Navbar';
-import About from './paginas/about/About';
+import Login from './paginas/login/Login';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
 function App() {
   return (
-   <Router>
-      <NavBar/>
+    <Router>
+      <Navbar />
       <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/home' element={<Home />} />
-      <Route path='/about' element={<About />} />
+
+        <Route path="/" element={<Login  />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
+
       </Routes>
-   </Router>
+      <Footer />
+    </Router>
+
   );
 }
 
